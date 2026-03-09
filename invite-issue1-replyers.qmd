@@ -1,3 +1,7 @@
+---
+eval: false
+---
+
 # 邀请 Issue 作者加入组织
 
 使用 R 写一个简单的脚本，邀请 GitHub 组织（`D2RS-2026spring`）指定仓库（`members`）中的 Issue 1 的 Replyers 加入组织。

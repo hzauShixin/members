@@ -8,7 +8,7 @@ editor: visual
 
 ## 说明
 
-以下名单来自 [Issue #1](https://github.com/D2RS-2026spring/members/issues/1) 的回复，数据实时从 GitHub API 拉取。学号中间5位已脱敏处理。
+以下名单来自 [Issue #1](https://github.com/D2RS-2026spring/members/issues/1) 的回复，数据实时从 GitHub API 拉取。
 
 ```{r}
 #| echo: false
@@ -106,7 +106,7 @@ student_display <- student_df |>
   arrange(created_at) |>
   mutate(
     序号         = row_number(),
-    学号         = map_chr(student_id, mask_id),
+    学号         = student_id,
     姓名         = ifelse(is.na(name), "—", name),
     感兴趣方向   = ifelse(is.na(interest) | interest %in% c("无", "NA"), "—", interest),
     GitHub账号   = sprintf('<a href="https://github.com/%s" target="_blank">%s</a>', login, login),
